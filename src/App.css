@@ -3,8 +3,8 @@
     grid-template-areas:
     'h h'
     'n c';
-    grid-template-rows: 50px 1fr;
-    grid-template-columns: 3fr 10fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 3fr 9fr;
     grid-gap: 2px;
     width: 1200px;
     height: 800px;
@@ -15,9 +15,11 @@
     background-color: #37f6f0;
 
 }
-header img{
-    width: 50px;
-    height: 50px;
+
+header img {
+    width: 68px;
+    height: 60px;
+    border-right: solid 2px white;
 }
 
 .nav {
@@ -25,8 +27,11 @@ header img{
     background-color: #FF9139;
 
 }
+
 nav ul {
     list-style-type: none;
+    margin-left: 3px;
+    padding-left: 3px;
 }
 
 .content {
@@ -34,12 +39,14 @@ nav ul {
     background-color: #FFDA92;
 
 }
-.content div ul{
+
+.content div ul {
     list-style-type: none;
     margin-left: 3px;
     padding-left: 3px;
 }
-.content img{
+
+.content img  {
     width: 1200px;
     height: 600px;
 }
