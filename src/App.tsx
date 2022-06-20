@@ -25,7 +25,9 @@ const App = () => {
           alt="Подводник стоит на дне перед челюстями монстра" width="695px"
           height="354px"/>
         </div>
-        <div>Ava+description</div>
+        <div>
+          {/*<img src="https://kartinkin.net/uploads/posts/2021-07/1625176910_34-kartinkin-com-p-vodolaz-art-art-krasivo-35.jpg" alt="Арт водолаз +  фридайвер"/>*/}
+          Ava+description</div>
         <div>My posts
           <div>
             New posts
