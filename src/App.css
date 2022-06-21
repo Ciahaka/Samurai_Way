@@ -1,52 +1,11 @@
 .site-wrapper {
     display: grid;
     grid-template-areas:
-    'h h'
+    'h h '
     'n c';
     grid-template-rows: 60px 1fr;
-    grid-template-columns: 3fr 9fr;
+    grid-template-columns: 1fr 10fr;
     grid-gap: 2px;
     width: 1200px;
     height: 800px;
-}
-
-.header {
-    grid-area: h;
-    background-color: #37f6f0;
-
-}
-
-header img {
-    width: 68px;
-    height: 60px;
-    border-right: solid 2px white;
-}
-
-.nav {
-    grid-area: n;
-    background-color: #FF9139;
-
-}
-
-nav ul {
-    list-style-type: none;
-    margin-left: 3px;
-    padding-left: 3px;
-}
-
-.content {
-    grid-area: c;
-    background-color: #FFDA92;
-
-}
-
-.content div ul {
-    list-style-type: none;
-    margin-left: 3px;
-    padding-left: 3px;
-}
-
-.content img  {
-    width: 1200px;
-    height: 600px;
 }
