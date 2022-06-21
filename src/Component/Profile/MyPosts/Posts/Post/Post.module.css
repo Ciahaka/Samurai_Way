@@ -1,0 +1,15 @@
+.item{
+    list-style-type: none;
+    margin-left: 3px;
+    padding-left: 3px;
+
+}
+/*.item.active{*/
+/*    color: blueviolet;*/
+/*    font-style: italic;*/
+/*}*/
+.item img {
+    width:50px;
+    height:50px;
+    border-radius:50px
+}
