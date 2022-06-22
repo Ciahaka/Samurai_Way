@@ -2,15 +2,11 @@
     grid-area: h;
     background-color: #37f6f0;
 
+
 }
 
 header img {
-    width: 68px;
-    height: 60px;
+    width: 109px;
+    height: 80px;
     border-right: solid 2px white;
 }
-/*.h1 {*/
-/*    margin-left: 15px;*/
-/*    padding-left: 15px;*/
-/*    text-align: center;*/
-/*}*/

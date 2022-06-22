@@ -11,6 +11,8 @@
 }
 .item {
     color: darkblue;
+    font-size: larger;
+    font-weight: bolder;
 }
 .item.active {
     color: red;

@@ -10,6 +10,9 @@ export const MyPosts = () => {
       <InputArea/>
       <ButtonSend/>
       <Post/>
+      <Post/>
+      <Post/>
+      <Post/>
     </div>
   )
 

@@ -9,7 +9,7 @@ export const Description = () => {
           <div>Дата рождения: 30 февраля</div>
           <div> Город: Атлантида</div>
           <div>Образование: Водолазная школа</div>
-          WebSite: <a className={classes.a} href={'https://ichthyander.lol'}> сthulhu.lol </a>
+          WebSite: <a className={classes.a} href={'https://oz.by/books/more10486082.html'} target="_blank"> сthulhu.lol </a>
         </h3>
       </div>
 
