@@ -1,18 +1,16 @@
 import React from 'react';
-import classes  from "./Post/Post.module.css";
+import classes from "./Post/Post.module.css";
 import {Post} from "./Post/Post";
+import {ButtonSend} from "../ButtonSend/ButtonSend";
+import {InputArea} from "../InputArea/InputArea";
 
 export const MyPosts = () => {
   return (
-      <div>My posts
-        <div>
-          <textarea></textarea>
-          <button>Add Post</button>
-        </div>
-       <Post/>
-       <Post/>
-       <Post/>
-      </div>
+    <div>
+      <InputArea/>
+      <ButtonSend/>
+      <Post/>
+    </div>
   )
 
 }
