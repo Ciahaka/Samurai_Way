@@ -1,4 +1,10 @@
-.content {
-    grid-area: c;
-    background-color: #FFDA92;
+.desc{
+    position:relative ;
+    left:9em; bottom:159px
+}
+.h1{
+    color: #2c2929
+}
+.a{
+    text-decoration:none
 }
