@@ -2,6 +2,8 @@
     list-style-type: none;
     margin-left: 3px;
     padding-left: 3px;
+    font-size: larger;
+    font-style: italic;
 
 }
 /*.item.active{*/
