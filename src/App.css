@@ -1,4 +1,4 @@
-.site-wrapper {
+.siteWrapper {
     display: grid;
     grid-template-areas:
     'h h '
@@ -9,3 +9,11 @@
     width: 1200px;
     height: 800px;
 }
+
+.siteWrapperContent {
+
+    grid-area: c;
+    background-color: #FFDA92;
+}
+
+
