@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "../Profile/Profile.module.css";
-import {MyPosts} from "./MyPosts/Posts/MyPosts";
+import {MyPost} from "./MyPosts/Posts/MyPost";
 import {BackImage} from "./BackImg/BackImage";
 import {Avatar} from "./Avatar/Avatar";
 import {Description} from "./Description/Description";
@@ -8,11 +8,11 @@ import {Description} from "./Description/Description";
 
 export const Profile = () => {
   return (
-    <div className={classes.content}>
+    <div>
       <BackImage/>
       <Avatar/>
       <Description/>
-      <MyPosts/>
+      <MyPost/>
     </div>
   )
 
