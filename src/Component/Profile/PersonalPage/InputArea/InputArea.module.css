@@ -1,15 +1,18 @@
+
 .input {
+    display: grid;
     width: 99%;
-    height: 35px;
+    height:30px;
     border: 2px solid #2c2929;
     border-radius: 4px;
     resize: none;
 }
 
-.lebel {
+.caption {
     font-size: larger;
     font-weight: bold;
     color: #2c2929;
+
 }
 
 /*.area{*/
