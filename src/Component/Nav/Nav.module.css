@@ -1,20 +1,25 @@
 .nav {
     grid-area: n;
     background-color: #FF9139;
+    padding: 6px;
 
 }
-
-.nav ul {
+.ul {
     list-style-type: none;
     margin-left: 3px;
     padding-left: 3px;
-}
-.item {
-    color: darkblue;
     font-size: larger;
     font-weight: bolder;
 }
-.item.active {
-    color: red;
-    font-size: larger ;
+
+.ul a{
+    color: #5b5c5d;
+    text-decoration: none;
 }
+
+.ul a.activeLink {
+    font-size: larger;
+    color: darkred;
+}
+
+
