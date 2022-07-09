@@ -1,6 +1,6 @@
 .btn {
 
-    display: inline-block;
+    display: grid;
     box-sizing: border-box;
     padding: 0 20px;
     margin: 0 15px 15px 0;
@@ -19,20 +19,27 @@
     user-select: none;
     appearance: none;
     touch-action: manipulation;
-    vertical-align:top;
-    position:relative ;
-    left:70.7em; top:2px
+    vertical-align: top;
+    position: relative;
+    left:134.6ex;
+    top: 3px;
+    width: 10%;
+
 
 }
+
 .btn:hover {
     background-color: #002fed;
 }
+
 .btn:active {
     background-color: #2f599e !important;
 }
+
 .btn:focus-visible {
     box-shadow: 0 0 0 3px lightskyblue;
 }
+
 .btn:disabled {
     background-color: #6c87b5;
     pointer-events: none;
