@@ -1,9 +1,10 @@
 .footer {
-    height: 80px;
     background-color: #6C63FF;
+    display: grid;
+    grid-area: f;
 }
 .footer a {
-    color: #FFFFFF;
+    color: #232222;
     text-decoration: none;
     text-transform: capitalize;
 

@@ -3,7 +3,7 @@ import s from './NewsBar.module.css'
 
 
 export const NewsBar = () => {
-  return <div>
+  return <div className={s.newsAside}>
     <aside>
       <div>
         <h3>News_1</h3>

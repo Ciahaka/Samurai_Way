@@ -1,0 +1,5 @@
+.navAside{
+    display: grid;
+    grid-area: nav;
+    border: 1px solid gray;
+}

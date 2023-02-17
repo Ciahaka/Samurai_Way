@@ -1,0 +1,5 @@
+.newsAside{
+    display: grid;
+    grid-area: news;
+    border: 1px solid gray;
+}
