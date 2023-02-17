@@ -1,0 +1,13 @@
+.footer {
+    height: 80px;
+    background-color: #6C63FF;
+}
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+.footer img {
+    margin-right: 10px;
+}
