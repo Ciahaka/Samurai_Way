@@ -1,11 +1,10 @@
 import React from 'react';
-import s from './MainContent.module.css'
+import s from './Profile.module.css'
 import starry_sky from '../../multimedia/images/img_for_main_content.jpg'
 
-export const MainContent = () => {
+export const Profile = () => {
   return (
     <div className={s.section}>
-
       <section>
         <h1>main page</h1>
         <div>
@@ -15,10 +14,15 @@ export const MainContent = () => {
           <h3>Ava + Description</h3>
         </div>
         <div>
-          <h4>My posts</h4>
-          <div><p>post_1</p></div>
-          <div><p>post_2</p></div>
-          <div><p>post_3</p></div>
+          <h3>My posts</h3>
+          <div>New Post</div>
+          <div>
+            <div><p>post_1</p></div>
+            <div><p>post_2</p></div>
+            <div><p>post_3</p></div>
+          </div>
+
+
         </div>
 
       </section>
