@@ -10,5 +10,15 @@
 
 }
 .footer img {
-    margin-right: 10px;
+    margin-right: 5px;
+    width: 40px;
+
+}
+.footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 94px;
+    flex-wrap: wrap;
 }

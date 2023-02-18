@@ -1,5 +1,7 @@
 import React from 'react';
 import s from './Header.module.css'
+import logo from '../../multimedia/images/icons8-website-48.png'
+
 
 
 export const Header = () => {
@@ -7,7 +9,7 @@ export const Header = () => {
   <div className={s.header}>
     <header>
       <a href="#" target="_blank">
-        <img src="../multimedia/images/icons8-website-48.png" alt="logo"/>
+        <img src={logo} alt="logo"/>
       </a>
       <button>login</button>
     </header>
