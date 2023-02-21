@@ -19,3 +19,9 @@
 'nav sc news'
 'f f f';
 }
+
+.app-wrapper-content {
+    display: grid;
+    grid-area: sc;
+    border: 1px solid gray;
+}
