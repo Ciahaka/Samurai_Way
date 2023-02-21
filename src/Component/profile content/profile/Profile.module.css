@@ -1,7 +1,4 @@
 .section {
-    display: grid;
-    grid-area: sc;
-    border: 1px solid gray;
 
 }
 .imgBack {
