@@ -25,3 +25,8 @@
     grid-area: sc;
     border: 1px solid gray;
 }
+.app-wrapper-footer{
+    background-color: #6C63FF;
+    display: grid;
+    grid-area: f;
+}
