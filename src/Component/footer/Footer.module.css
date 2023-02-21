@@ -31,12 +31,14 @@
     color: #1f1e1e;
     text-decoration: none;
     text-transform: capitalize;
+
 }
 .footer img {
     margin-right: 5px;
     width: 40px;
+
 }
-.footer ul {
+.footer ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
