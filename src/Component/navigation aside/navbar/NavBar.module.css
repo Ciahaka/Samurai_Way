@@ -11,5 +11,8 @@
 .aside a{
     text-decoration: none;
     text-transform: capitalize;
+    padding: 12px;
+    font-size:large;
+    font-weight: bold;
 }
 
