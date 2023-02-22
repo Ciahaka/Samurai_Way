@@ -11,7 +11,7 @@ export const NavBar = () => {
                  style={(params) => {
                    return {color: params.isActive ? 'darkred' : 'darkgreen'}
                  }}> Profile </NavLink>
-        <NavLink to={'/Dialogs'} rel={'no-referrer nofollow no-opener'}
+        <NavLink  to={'/Dialogs'} rel={'no-referrer nofollow no-opener'}
                  style={(params) => {
           return {color: params.isActive ? 'darkred' : 'darkviolet'}
         }}> Dialogs</NavLink>
