@@ -1,18 +1,34 @@
 import React from 'react';
 import s from './NavBar.module.css'
+import {NavLink} from 'react-router-dom';
 
 
-export const   NavBar = () => {
+export const NavBar = () => {
   return (
-  <div className={s.navAside}>
-    <aside className={s.aside}>
-      <a href="/Profile" target={'_blank'} rel={'no-referrer nofollow no-opener'} style={{color:'green'}}>Profile</a>
-      <a href="/Dialogs" target={'_blank'} rel={'no-referrer nofollow no-opener'} style={{color:'darkviolet'}}>Dialogs</a>
-      <a href="/Music" target={'_blank'} rel={'no-referrer nofollow no-opener'} style={{color:'darkgreen'}}>Music</a>
-      <a href="/Photo" target={'_blank'} rel={'no-referrer nofollow no-opener'} style={{color:'darkviolet'}}>Photo</a>
-      <a href="/News" target={'_blank'} rel={'no-referrer nofollow no-opener'} style={{color:'darkgreen'}}>News</a>
-    </aside>
-  </div>
+    <div className={s.navAside}>
+      <aside className={s.aside}>
+        <NavLink to={'/Profile'} rel={'no-referrer nofollow no-opener'}
+                 style={(params) => {
+                   return {color: params.isActive ? 'darkred' : 'darkgreen'}
+                 }}> Profile </NavLink>
+        <NavLink to={'/Dialogs'} rel={'no-referrer nofollow no-opener'}
+                 style={(params) => {
+          return {color: params.isActive ? 'darkred' : 'darkviolet'}
+        }}> Dialogs</NavLink>
+        <NavLink to={'/Music'} rel={'no-referrer nofollow no-opener'}
+                 style={(params) => {
+          return {color: params.isActive ? 'darkred' : 'darkgreen'}
+        }}>Music</NavLink>
+        <NavLink to={'/Photo'} rel={'no-referrer nofollow no-opener'}
+                 style={(params) => {
+          return {color: params.isActive ? 'darkred' : 'darkviolet'}
+        }}>Photo</NavLink>
+        <NavLink to={'/News'} rel={'no-referrer nofollow no-opener'}
+                 style={(params) => {
+          return {color: params.isActive ? 'darkred' : 'darkgreen'}
+        }}>News</NavLink>
+      </aside>
+    </div>
   )
 }
 
