@@ -4,20 +4,29 @@ import brut from '../../../multimedia/images/icons8-брут.svg'
 import rik from '../../../multimedia/images/icons8-рик-санчес.svg'
 import turtl from '../../../multimedia/images/icons8-черепашки-ниндзя.svg'
 import bmo from '../../../multimedia/images/icons8-bmo.svg'
+import {NavLink} from 'react-router-dom';
 
 
 export const Footer = () => {
   return <div className={s.footer}>
     <footer>
       <ul>
-        <li><a href="#" target="_blank"
-               rel={'no-referrer nofollow no-opener'}><img src={brut} alt="Home"/>Home</a></li>
-        <li><a href="/About Us" target="_blank"
-               rel={'no-referrer nofollow no-opener'}> <img src={rik} alt="All Photo"/> About Us</a></li>
-        <li><a href="/Project" target="_blank"
-               rel={'no-referrer nofollow no-opener'}> <img src={turtl} alt="Sandbox"/>About the Project</a></li>
-        <li><a href='/Contacts' target="_blank"
-               rel={'no-referrer nofollow no-opener'}> <img src={bmo} alt="Contacts"/>Contacts</a></li>
+        <li><NavLink to="/Home"
+                     rel={'no-referrer nofollow no-opener'}
+                     style={{color: 'darkgreen'}}>
+          <img src={brut} alt="Home"/>Home</NavLink></li>
+        <li><NavLink to="/About Us"
+                     rel={'no-referrer nofollow no-opener'}
+                     style={{color: 'darkgreen'}}>
+          <img src={rik} alt="All Photo"/> About Us</NavLink></li>
+        <li><NavLink to="/Project"
+                     rel={'no-referrer nofollow no-opener'}
+                     style={{color: 'darkgreen'}}>
+          <img src={turtl} alt="Sandbox"/>About the Project</NavLink></li>
+        <li><NavLink to="/Contacts"
+                     rel={'no-referrer nofollow no-opener'}
+                     style={{color: 'darkgreen'}}>
+          <img src={bmo} alt="Contacts"/>Contacts</NavLink></li>
       </ul>
     </footer>
   </div>
