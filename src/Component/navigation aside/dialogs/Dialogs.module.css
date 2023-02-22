@@ -1,20 +1,27 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
 }
 
 .dialogsItems {
 
 }
 
-.singleDialog {
+.singleDialog  {
    padding: 5px;
-}
 
+}
+.singleDialog a{
+    text-decoration: none;
+
+}
 .messagesItems {
 
 }
 
 .singleMessages {
     padding: 5px;
+}
+.singleMessages a{
+
 }
