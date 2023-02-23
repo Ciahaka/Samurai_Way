@@ -4,20 +4,20 @@ import shit from '../../../multimedia/images/satan-shit.svg'
 import like from '../../../multimedia/images/fuck.svg'
 
 export type PostPropsType = {
-  id:number
+  id: number
   message: string
   likesCount: number
 }
 export const Post = (props: PostPropsType) => {
   const {message, likesCount} = props
   return (
-    <div >
+    <div>
       <img className={s.avatarImage} src={shit} alt="shit icon"/>
       {message}
-        <div className={s.span}>
-          {likesCount}
-          <img className={s.likeIcon} src={like} alt="like icon"/>
-        </div>
+      <div className={s.span}>
+        {likesCount}
+        <img className={s.likeIcon} src={like} alt="like icon"/>
+      </div>
 
     </div>
 

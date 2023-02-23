@@ -7,9 +7,10 @@ export type PostPropsType = {
   postsData: PostsType[]
 }
 
-export const MyPosts = (props:PostPropsType) => {
+export const MyPosts = (props: PostPropsType) => {
 
-  const postsElement = props.postsData.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>)
+  const postsElement = props.postsData.map(p => <Post key={p.id} id={p.id} message={p.message}
+                                                      likesCount={p.likesCount}/>)
   return (
     <div className={s.posts}>
       <h3>My posts</h3>

@@ -8,12 +8,12 @@ import {PostsType} from '../../../../App';
 export type ProfilePropsType = {
   postsData: PostsType[]
 }
-export const Profile = (props:ProfilePropsType) => {
+export const Profile = (props: ProfilePropsType) => {
   return (
     <div className={s.section}>
       <section>
         <h1 className={s.h1}>Main Page</h1>
-        <ProfileInfo />
+        <ProfileInfo/>
         <MyPosts postsData={props.postsData}/>
 
       </section>

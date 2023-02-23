@@ -5,14 +5,15 @@ import {SingleDialog} from '../single dialog/SingleDialog';
 import {SingleMessage} from '../single message/SingleMessage';
 
 export type DialogsPropsType = {
-  dialogsData:DialogsType[]
+  dialogsData: DialogsType[]
   messageData: MessageType[]
 }
 
 export const Dialogs = (props: DialogsPropsType) => {
 
-  const dialogsElement = props.dialogsData.map((d) => <SingleDialog id={d.id} name={d.name}/>)
-  const messagesElement = props.messageData.map(m => <SingleMessage id={m.id} message={m.message}></SingleMessage>)
+  const dialogsElement = props.dialogsData.map((d) => <SingleDialog key={d.id} id={d.id} name={d.name}/>)
+  const messagesElement = props.messageData.map(m => <SingleMessage key={m.id} id={m.id}
+                                                                    message={m.message}></SingleMessage>)
 
   return (
 

@@ -30,7 +30,10 @@ const postsData = [
 ]
 root.render(
   <BrowserRouter>
-    <App dialogsData={dialogsData} messageData={messageData} postsData={postsData} />
+    <App dialogsData={dialogsData}
+         messageData={messageData}
+         postsData={postsData}
+    />
   </BrowserRouter>
 )
 reportWebVitals();
