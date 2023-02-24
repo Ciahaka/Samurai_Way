@@ -2,11 +2,13 @@ import React from 'react';
 import s from './Profile.module.css'
 import {MyPosts} from '../../posts block/my posts/MyPosts';
 import {ProfileInfo} from '../profile info/ProfileInfo';
-import {PostsType} from '../../../../App';
+import {PostDataType} from '../../../../state/state';
+
+
 
 
 export type ProfilePropsType = {
-  postsData: PostsType[]
+  postsData: PostDataType[]
 }
 export const Profile = (props: ProfilePropsType) => {
   return (
