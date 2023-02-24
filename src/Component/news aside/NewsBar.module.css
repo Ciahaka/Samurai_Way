@@ -1,5 +1,21 @@
-.newsAside{
+.newsAside {
     display: grid;
     grid-area: news;
     border: 1px solid gray;
+}
+
+.newsBlock{
+
+    gap: 20px;
+
+
+}
+.singleNews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.singleNews > img {
+
+    width: 220px;
 }
