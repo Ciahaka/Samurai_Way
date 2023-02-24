@@ -3,7 +3,7 @@ import s from './Dialogs.module.css'
 
 import {SingleDialog} from '../single dialog/SingleDialog';
 import {SingleMessage} from '../single message/SingleMessage';
-import {DialogDataType, MessageDataType} from '../../../state/state';
+import {DialogDataType, MessageDataType} from '../../../redux/state';
 
 export type DialogsPropsType = {
   dialogsData: DialogDataType[]
