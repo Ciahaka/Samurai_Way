@@ -12,27 +12,10 @@ import {Photo} from './Component/navigation aside/photo/Photo';
 import {Contacts} from './Component/footer block/our contacts/Contacts';
 import {Project} from './Component/footer block/project/Project';
 import {AboutUs} from './Component/footer block/about us/AboutUs';
+import {rootState} from './state/state'
 
-export type DialogsType = {
-  id: string
-  name: string
-}
-export type MessageType = {
-  id: string
-  message: string
-}
-export type PostsType = {
-  id: number
-  message: string
-  likesCount: number
-}
-export type DialogsPropsType = {
-  dialogsData: DialogsType[]
-  messageData: MessageType[]
-  postsData: PostsType[]
-}
 
-export const App = (props: DialogsPropsType) => {
+export const  App = () => {
 
 
   return (
@@ -41,10 +24,10 @@ export const App = (props: DialogsPropsType) => {
       <NavBar/>
       <div className="app-wrapper-content">
         <Routes>
-          <Route path={'/Home'} element={<Profile postsData={props.postsData}/>}/>
-          <Route path={'/Profile/*'} element={<Profile postsData={props.postsData}/>}/>
-          <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={props.dialogsData}
-                                                       messageData={props.messageData}/>}/>
+          <Route path={'/Home'} element={<Profile postsData={rootState.posts.postsData}/>}/>
+          <Route path={'/Profile/*'} element={<Profile postsData={rootState.posts.postsData}/>}/>
+          <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={rootState.dialogs.dialogsData}
+                                                       messageData={rootState.dialogs.messageData}/>}/>
           <Route path={'/Music'} element={<Music/>}/>
           <Route path={'/Photo'} element={<Photo/>}/>
           <Route path={'/News'} element={<NewsBar/>}/>
