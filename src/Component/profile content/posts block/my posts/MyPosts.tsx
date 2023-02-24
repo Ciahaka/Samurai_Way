@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './MyPosts.module.css'
 import {Post} from '../../single post/Post';
-import {PostsType} from '../../../../App';
+
+import {PostDataType} from '../../../../state/state';
 
 export type PostPropsType = {
-  postsData: PostsType[]
+  postsData: PostDataType[]
 }
 
 export const MyPosts = (props: PostPropsType) => {
