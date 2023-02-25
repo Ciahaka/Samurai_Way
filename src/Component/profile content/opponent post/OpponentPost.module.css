@@ -1,0 +1,55 @@
+.postsBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.singlePost{
+    display: flex;
+    justify-content:left;
+    gap: 15px;
+}
+.avatarImage {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.messageText {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+    min-width: 100px;
+    height: 50px;
+    border-radius: 20px 20px 20px 0;
+    background-color: green;
+    color: white;
+    font-size: large;
+    position:relative ;
+}
+.messageText:after{
+    content: "";
+    position:absolute;
+    top: 12px;
+    left:-32px;
+    height: 38px;
+    width: 33px;
+    background: radial-gradient(80px at top left, transparent 49%, #008000FF 51%) no-repeat left bottom
+}
+
+.likeBlock {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2px;
+    margin-left: 7px;
+}
+
+.likeCount {
+    font-size: large;
+
+}
+
+.likeIcon {
+    width: 30px;
+
+}
