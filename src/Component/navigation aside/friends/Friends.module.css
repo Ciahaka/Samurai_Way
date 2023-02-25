@@ -1,0 +1,16 @@
+.friendsBlock {
+
+}
+
+.friendsItem {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-align: center;
+    padding: 7px;
+   gap: 10px;
+}
+
+.friendsBlock ul > li > img {
+    width: 50px;
+}
