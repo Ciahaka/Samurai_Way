@@ -4,7 +4,7 @@ import {Header} from './Component/header block/Header';
 import {Footer} from './Component/footer block/footer/Footer';
 import {NavBar} from './Component/navigation aside/navbar/NavBar';
 import {Profile} from './Component/profile content/profile block/profile/Profile';
-import {NewsBar} from './Component/news aside/NewsBar';
+import {NewsBar} from './Component/news/news bar/NewsBar';
 import {Dialogs} from './Component/dialogs block/dialogs/Dialogs';
 import {Route, Routes} from 'react-router-dom';
 import {Music} from './Component/navigation aside/music/Music';
@@ -13,9 +13,11 @@ import {Contacts} from './Component/footer block/our contacts/Contacts';
 import {Project} from './Component/footer block/project/Project';
 import {AboutUs} from './Component/footer block/about us/AboutUs';
 import {rootState} from './redux/state'
+import {Friends} from './Component/navigation aside/friends/Friends';
+import {NewsBlock} from './Component/news/news block/NewsBlock';
 
 
-export const  App = () => {
+export const App = () => {
 
 
   return (
@@ -30,7 +32,8 @@ export const  App = () => {
                                                        messageData={rootState.dialogs.messageData}/>}/>
           <Route path={'/Music'} element={<Music/>}/>
           <Route path={'/Photo'} element={<Photo/>}/>
-          <Route path={'/News'} element={<NewsBar/>}/>
+          <Route path={'/Friends'} element={<Friends/>}/>
+          <Route path={'/News'} element={<NewsBlock/>}/>
           <Route path={'/Project'} element={<Project/>}/>
           <Route path={'/About Us'} element={<AboutUs/>}/>
           <Route path={'/Contacts'} element={<Contacts/>}/>
