@@ -1,4 +1,12 @@
-.post {
+.postsBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.singlePost{
+    display: flex;
+    justify-content:right;
+    gap: 10px;
 
 }
 .avatarImage {
@@ -6,12 +14,44 @@
     border-radius: 50%;
 
 }
-.p{
+
+.messageText {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+    min-width: 100px;
+    height: 50px;
+    border-radius: 20px 20px 0 20px;
+    background-color: orange;
+    color: white;
+    font-size: large;
+    position:relative ;
+}
+.messageText:after{
+    content: "";
+    position:absolute;
+    top: 12px;
+    right:-32px;
+    height: 38px;
+    width: 33px;
+    background: radial-gradient(80px at top right, transparent 49%, #FFA500FF 51%) no-repeat left bottom
+}
+
+.likeBlock {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 4px;
+    margin-right: 7px;
+}
+
+.likeCount {
+font-size: large;
 
 }
-.span {
 
-}
-.likeIcon{
+.likeIcon {
     width: 30px;
+
 }
