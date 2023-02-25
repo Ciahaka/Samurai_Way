@@ -17,10 +17,12 @@ export type DialogsType = {
 }
 export type PostsType = {
   postsData:PostDataType[]
+
 }
 export type RootStateType = {
   dialogs:DialogsType
   posts:PostsType
+
 }
 export const rootState:RootStateType = {
   dialogs: {
@@ -45,6 +47,7 @@ export const rootState:RootStateType = {
       {id: 3, message: 'В порядке! Спасибо зарядке!', likesCount: 8},
     ]
   },
+
 }
 
 
