@@ -1,0 +1,29 @@
+.newsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.singleNews {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.singleNews > h3 {
+    margin: auto;
+    text-transform: capitalize;
+}
+
+.singleNews > img {
+    width: 240px;
+    border-radius: 8px;
+    /*float: left;*/
+    /*height: 240px;*/
+    /*shape-outside:circle(50%) ;*/
+}
+
+.img {
+
+}
