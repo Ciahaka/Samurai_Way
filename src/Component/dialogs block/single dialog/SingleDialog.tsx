@@ -12,7 +12,7 @@ export const SingleDialog =(props:SingleDialogPropsType) =>{
     <div className={s.singleDialog} >
       <NavLink to={'/Dialogs/' + id} rel={'no-referrer nofollow no-opener'}
                style={(params) => {
-                 return {color: params.isActive ? 'darkred' : 'darkgreen'}
+                 return {color: params.isActive ? 'darkred' : 'white'}
                }}>
         {name}
       </NavLink>
