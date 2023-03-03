@@ -3,6 +3,7 @@ import s from './MyPosts.module.css'
 import {Post} from '../../single post/Post';
 
 import {PostDataType} from '../../../../redux/state';
+import {MessageButton} from '../../../button message/MessageButton';
 
 
 export type PostPropsType = {
@@ -22,12 +23,8 @@ export const MyPosts = (props: PostPropsType) => {
     <div className={s.posts}>
       <h3>My posts</h3>
       <div className={s.inputArea}>
-        <textarea ref={newPostElement} placeholder={' Расскажи свою историю!'}
-
-        ></textarea>
-        <div className={s.btnArea}>
-          <button onClick={addNewPost} className={s.btn}> add New Post</button>
-        </div>
+        <textarea ref={newPostElement} placeholder={' Расскажи свою историю!'}></textarea>
+        <MessageButton name={'add New Post'} callback={addNewPost}/>
 
       </div>
       {postsElement}
