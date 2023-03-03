@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './OpponentPost.module.css'
-import luca from '../../../multimedia/images/lukashenko.svg'
-import like from '../../../multimedia/images/fuck.svg'
+import luca from '../../../../multimedia/images/lukashenko.svg'
+import like from '../../../../multimedia/images/fuck.svg'
 
 
 type PostPropsType = {

@@ -3,7 +3,7 @@ import s from './Profile.module.css'
 import {MyPosts} from '../../posts block/my posts/MyPosts';
 import {ProfileInfo} from '../profile info/ProfileInfo';
 import {PostDataType} from '../../../../redux/state';
-import {OpponentPost} from '../../opponent post/OpponentPost';
+import {OpponentPost} from '../../posts block/opponent post/OpponentPost';
 
 
 

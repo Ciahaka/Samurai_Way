@@ -1,14 +1,25 @@
 .dialogs {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: 4fr 0.5fr;
+    gap: 3px;
 }
 
-.dialogsItems {
+.dialogsElement {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+   font-size: large;
+
 
 }
 
 
-.messagesItems {
+.messagesElement {
+    border: 1px solid gray;
+}
 
+.managementBlock {
+    border: 1px solid gray;
 }
 

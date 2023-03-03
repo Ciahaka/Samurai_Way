@@ -26,7 +26,7 @@ export const App = () => {
       <NavBar/>
       <div className="app-wrapper-content">
         <Routes>
-          <Route path={'/Home'} element={<Profile postsData={rootState.posts.postsData}/>}/>
+          <Route path={'/Home/*'} element={<Profile postsData={rootState.posts.postsData}/>}/>
           <Route path={'/Profile/*'} element={<Profile postsData={rootState.posts.postsData}/>}/>
           <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={rootState.dialogs.dialogsData}
                                                        messageData={rootState.dialogs.messageData}/>}/>

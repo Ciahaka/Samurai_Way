@@ -17,16 +17,22 @@ export const Dialogs = (props: DialogsPropsType) => {
                                                                     message={m.message}></SingleMessage>)
 
   return (
-
-    <div className={s.dialogs}>
-      <div className={s.dialogsItems}>
-        {dialogsElement}
-      </div>
-
-      <div className={s.messagesItems}>
-        {messagesElement}
-      </div>
+<div>
+  <div className={s.dialogs}>
+    <div className={s.dialogsElement}>
+      {dialogsElement}
     </div>
+
+    <div className={s.messagesElement}>
+      {messagesElement}
+    </div>
+  </div>
+  <div className={s.managementBlock}>
+    <textarea></textarea>
+    <button>Add New Message</button>
+  </div>
+</div>
+
   )
 
 }
