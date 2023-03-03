@@ -2,24 +2,30 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 4fr 0.5fr;
-    gap: 3px;
+    padding: 5px;
+
 }
 
 .dialogsElement {
-    border: 1px solid gray;
     display: flex;
     flex-direction: column;
-   font-size: large;
-
-
+    font-size: large;
+    background-color: orange;
+    padding: 10px;
+    margin-left: 2px;
+    border-radius: 8px 0 0 8px;
 }
-
 
 .messagesElement {
-    border: 1px solid gray;
+    background-color: rgba(255, 165, 0, 0.7);
+    border-radius:0 8px 8px 0;
 }
 
-.managementBlock {
-    border: 1px solid gray;
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 5px;
+
 }
 
