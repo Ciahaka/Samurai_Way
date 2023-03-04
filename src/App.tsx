@@ -16,11 +16,13 @@ import {RootStateType} from './redux/state'
 import {Friends} from './Component/navigation aside/friends/Friends';
 import {NewsBlock} from './Component/news/news block/NewsBlock';
 
-export type StatePropsType={
-  state:RootStateType
-  addPostsMessage:(postMessage: string)=>void
+export type StatePropsType = {
+  state: RootStateType
+  addPostsMessage: () => void
+  textForUpdate: string
+  updateTextPostsMessage:(newText: string)=>void
 }
-export const App = (props:StatePropsType) => {
+export const App = (props: StatePropsType) => {
 
 
   return (
@@ -30,9 +32,17 @@ export const App = (props:StatePropsType) => {
       <div className="app-wrapper-content">
         <Routes>
           <Route path={'/Home/*'} element={<Profile postsData={props.state.posts.postsData}
-                                                    addPostsMessage={props.addPostsMessage}/>}/>
+                                                    textForUpdate={props.textForUpdate}
+                                                    addPostsMessage={props.addPostsMessage}
+                                                    updateTextPostsMessage={props.updateTextPostsMessage}
+          />}/>
+
           <Route path={'/Profile/*'} element={<Profile postsData={props.state.posts.postsData}
-                                                       addPostsMessage={props.addPostsMessage}/>}/>
+                                                       textForUpdate={props.textForUpdate}
+                                                       addPostsMessage={props.addPostsMessage}
+                                                       updateTextPostsMessage={props.updateTextPostsMessage}
+          />}/>
+
           <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={props.state.dialogs.dialogsData}
                                                        messageData={props.state.dialogs.messageData}/>}/>
           <Route path={'/Music'} element={<Music/>}/>
