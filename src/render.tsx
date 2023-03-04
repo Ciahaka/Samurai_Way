@@ -4,7 +4,7 @@ import './index.css';
 import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
-import {addPostsMessage, RootStateType} from './redux/state'
+import {addPostsMessage, RootStateType, updateTextPostsMessage} from './redux/state'
 
 
 
@@ -16,7 +16,10 @@ const root = ReactDOM.createRoot(
 export   const bllSetRender = (rootState:RootStateType)=>{
   root.render(
     <BrowserRouter>
-      <App state={rootState} addPostsMessage={addPostsMessage}
+      <App state={rootState}
+           textForUpdate={rootState.posts.textForUpdate}
+           addPostsMessage={addPostsMessage}
+           updateTextPostsMessage={updateTextPostsMessage}
       />
     </BrowserRouter>
   )
