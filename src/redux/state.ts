@@ -1,4 +1,5 @@
 import {v1} from 'uuid';
+import {bllSetRender} from '../render';
 
 export type DialogDataType = {
   id: string
@@ -60,7 +61,7 @@ export const addPostsMessage = (postMessage: string) => {
   };
 
   rootState.posts.postsData.push(newPostsMessage)
-
+  bllSetRender(rootState)
 }
 
 
