@@ -20,6 +20,7 @@ export const MyPosts = (props: PostPropsType) => {
   const addNewPost = ()=>{
     if (newPostElement.current){
       props.addPostsMessage(newPostElement.current.value)
+      newPostElement.current.value=''
     }
   }
 
