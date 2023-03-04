@@ -8,6 +8,7 @@ import {MessageButton} from '../../../button message/MessageButton';
 
 export type PostPropsType = {
   postsData: PostDataType[]
+  addPostsMessage:(postMessage:string)=>void
 }
 
 export const MyPosts = (props: PostPropsType) => {
@@ -16,7 +17,11 @@ export const MyPosts = (props: PostPropsType) => {
                                                       message={p.message}
                                                       likesCount={p.likesCount}/>)
   const newPostElement = useRef<HTMLTextAreaElement>(null)
-  const addNewPost = ()=> newPostElement.current !==null?alert(newPostElement.current.value):null
+  const addNewPost = ()=>{
+    if (newPostElement.current){
+      props.addPostsMessage(newPostElement.current.value)
+    }
+  }
 
 
   return (
