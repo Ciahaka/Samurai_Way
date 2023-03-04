@@ -19,6 +19,7 @@ export type DialogsType = {
   messageData: MessageDataType[]
 }
 export type PostsType = {
+  textForUpdate: string
   postsData: PostDataType[]
 
 }
@@ -44,6 +45,7 @@ export const rootState: RootStateType = {
     ],
   },
   posts: {
+    textForUpdate: '',
     postsData: [
       {id: v1(), message: 'Привет! Что нового?!', likesCount: 15},
       {id: v1(), message: 'Всё отлично! Как сам?', likesCount: 3},
@@ -53,16 +55,24 @@ export const rootState: RootStateType = {
 
 }
 
-export const addPostsMessage = (postMessage: string) => {
+export const addPostsMessage = () => {
   const newPostsMessage = {
     id: v1(),
-    message: postMessage,
+    message: rootState.posts.textForUpdate,
     likesCount: 145
   };
 
   rootState.posts.postsData.push(newPostsMessage)
+  rootState.posts.textForUpdate = ''
   bllSetRender(rootState)
 }
+
+export const updateTextPostsMessage = (newText: string) => {
+
+  rootState.posts.textForUpdate = newText
+  bllSetRender(rootState)
+}
+
 
 
 
