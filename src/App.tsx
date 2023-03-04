@@ -12,12 +12,15 @@ import {Photo} from './Component/navigation aside/photo/Photo';
 import {Contacts} from './Component/footer block/our contacts/Contacts';
 import {Project} from './Component/footer block/project/Project';
 import {AboutUs} from './Component/footer block/about us/AboutUs';
-import {addPostsMessage, rootState} from './redux/state'
+import {RootStateType} from './redux/state'
 import {Friends} from './Component/navigation aside/friends/Friends';
 import {NewsBlock} from './Component/news/news block/NewsBlock';
 
-
-export const App = () => {
+export type StatePropsType={
+  state:RootStateType
+  addPostsMessage:(postMessage: string)=>void
+}
+export const App = (props:StatePropsType) => {
 
 
   return (
@@ -26,10 +29,12 @@ export const App = () => {
       <NavBar/>
       <div className="app-wrapper-content">
         <Routes>
-          <Route path={'/Home/*'} element={<Profile postsData={rootState.posts.postsData} addPostsMessage={addPostsMessage}/>}/>
-          <Route path={'/Profile/*'} element={<Profile postsData={rootState.posts.postsData} addPostsMessage={addPostsMessage}/>}/>
-          <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={rootState.dialogs.dialogsData}
-                                                       messageData={rootState.dialogs.messageData}/>}/>
+          <Route path={'/Home/*'} element={<Profile postsData={props.state.posts.postsData}
+                                                    addPostsMessage={props.addPostsMessage}/>}/>
+          <Route path={'/Profile/*'} element={<Profile postsData={props.state.posts.postsData}
+                                                       addPostsMessage={props.addPostsMessage}/>}/>
+          <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={props.state.dialogs.dialogsData}
+                                                       messageData={props.state.dialogs.messageData}/>}/>
           <Route path={'/Music'} element={<Music/>}/>
           <Route path={'/Photo'} element={<Photo/>}/>
           <Route path={'/Friends'} element={<Friends/>}/>
