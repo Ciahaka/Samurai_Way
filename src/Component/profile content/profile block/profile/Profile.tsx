@@ -10,7 +10,9 @@ import {OpponentPost} from '../../posts block/opponent post/OpponentPost';
 
 export type ProfilePropsType = {
   postsData: PostDataType[]
-  addPostsMessage:(postMessage:string)=>void
+  addPostsMessage:()=>void
+  textForUpdate:string
+  updateTextPostsMessage:(newText: string)=>void
 }
 export const Profile = (props: ProfilePropsType) => {
   return (
@@ -18,7 +20,11 @@ export const Profile = (props: ProfilePropsType) => {
       <h2 >Main Page</h2>
       <section >
         <ProfileInfo/>
-        <MyPosts postsData={props.postsData} addPostsMessage={props.addPostsMessage}/>
+        <MyPosts postsData={props.postsData}
+                 textForUpdate={props.textForUpdate}
+                 addPostsMessage={props.addPostsMessage}
+                 updateTextPostsMessage={props.updateTextPostsMessage}
+                 />
         <OpponentPost id={1} message={'Как же мне это одолеть??'} likesCount={10}/>
       </section>
     </div>
