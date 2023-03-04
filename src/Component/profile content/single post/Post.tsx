@@ -5,7 +5,7 @@ import like from '../../../multimedia/images/fuck.svg'
 
 
 export type PostPropsType = {
-  id: number
+  id: string
   message: string
   likesCount: number
 }
