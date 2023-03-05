@@ -1,5 +1,13 @@
 import {v1} from 'uuid';
-import {bllSetRender} from '../render';
+
+
+let bllSetRender = (state: RootStateType) => {
+
+}
+export const subscribe = (observer: (state: RootStateType) => void) => {
+  bllSetRender = observer
+}
+
 
 export type DialogDataType = {
   id: string
@@ -17,6 +25,7 @@ export type PostDataType = {
 export type DialogsType = {
   dialogsData: DialogDataType[]
   messageData: MessageDataType[]
+  dialogsMessageValue: string
 }
 export type PostsType = {
   textForUpdate: string
@@ -43,6 +52,7 @@ export const rootState: RootStateType = {
       {id: v1(), message: 'Спасибо за приглашение!'},
       {id: v1(), message: 'Hi bro'},
     ],
+    dialogsMessageValue: ''
   },
   posts: {
     textForUpdate: '',
@@ -70,6 +80,24 @@ export const addPostsMessage = () => {
 export const updateTextPostsMessage = (newText: string) => {
 
   rootState.posts.textForUpdate = newText
+  bllSetRender(rootState)
+}
+
+export const addDialogsMessage = () => {
+  const newPostsMessage = {
+    id: v1(),
+    message: rootState.dialogs.dialogsMessageValue,
+
+  };
+
+  rootState.dialogs.messageData.push(newPostsMessage)
+  rootState.dialogs.dialogsMessageValue = ''
+  bllSetRender(rootState)
+}
+
+export const updateTextDialogsMessage = (newText: string) => {
+
+  rootState.dialogs.dialogsMessageValue = newText
   bllSetRender(rootState)
 }
 
