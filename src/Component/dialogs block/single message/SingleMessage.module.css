@@ -1,6 +1,26 @@
 .singleMessages {
-    padding: 5px;
-}
-.singleMessages a{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px 20px 0 20px;
+    background-color: white;
+    color: #252323;
+    min-width: 100px;
+    min-height: 50px;
+    font-size: medium;
+    font-style: italic;
+    position: relative;
 
+}
+
+.singleMessages::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    height: 35px;
+    width: 35px;
+
+    background: radial-gradient(85px at top right, transparent 49%, white 51%) no-repeat left bottom
 }

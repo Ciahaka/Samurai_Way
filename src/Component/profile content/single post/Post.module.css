@@ -7,12 +7,10 @@
     display: flex;
     justify-content:right;
     gap: 10px;
-
 }
 .avatarImage {
     width: 50px;
     border-radius: 50%;
-
 }
 
 .messageText {
