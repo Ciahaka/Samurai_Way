@@ -19,8 +19,11 @@ import {NewsBlock} from './Component/news/news block/NewsBlock';
 export type StatePropsType = {
   state: RootStateType
   addPostsMessage: () => void
+  addDialogsMessage:()=>void
   textForUpdate: string
+  messageValue:string
   updateTextPostsMessage:(newText: string)=>void
+  updateTextDialogsMessage:(newText: string)=>void
 }
 export const App = (props: StatePropsType) => {
 
@@ -44,7 +47,11 @@ export const App = (props: StatePropsType) => {
           />}/>
 
           <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={props.state.dialogs.dialogsData}
-                                                       messageData={props.state.dialogs.messageData}/>}/>
+                                                       messageData={props.state.dialogs.messageData}
+                                                       messageValue={props.messageValue}
+                                                       updateTextDialogsMessage={props.updateTextDialogsMessage}
+                                                       addDialogsMessage={props.addDialogsMessage}
+          />}/>
           <Route path={'/Music'} element={<Music/>}/>
           <Route path={'/Photo'} element={<Photo/>}/>
           <Route path={'/Friends'} element={<Friends/>}/>
