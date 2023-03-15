@@ -20,10 +20,12 @@ export const MyPosts = (props: PostPropsType) => {
                                                       likesCount={p.likesCount}/>)
   // const newPostElement = useRef<HTMLTextAreaElement>(null)
   const addNewPostHandler = () => {
+
     props.addPostsMessage()
   }
 
   const changeTextPostHandler = (e:ChangeEvent<HTMLTextAreaElement>) => {
+
     props.updateTextPostsMessage(e.currentTarget.value)
     // if (newPostElement.current) {
     //   props.updateTextPostsMessage(newPostElement.current.value)
