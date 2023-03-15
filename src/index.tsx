@@ -4,34 +4,29 @@ import './index.css';
 import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
-import {
-  addDialogsMessage,
-  addPostsMessage, rootState,
-  RootStateType, subscribe,
-  updateTextDialogsMessage,
-  updateTextPostsMessage
-} from './redux/state'
+import {RootStateType, store} from './redux/state'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const bllSetRender = (rootState:RootStateType)=>{
+const bllSetRender = (rootState: RootStateType) => {
   root.render(
     <BrowserRouter>
       <App state={rootState}
+           store={store}
            textForUpdate={rootState.posts.textForUpdate}
            messageValue={rootState.dialogs.dialogsMessageValue}
-           addPostsMessage={addPostsMessage}
-           updateTextPostsMessage={updateTextPostsMessage}
-           updateTextDialogsMessage={updateTextDialogsMessage}
-           addDialogsMessage={addDialogsMessage}
+           addPostsMessage={store.addPostsMessage}
+           updateTextPostsMessage={store.updateTextPostsMessage}
+           updateTextDialogsMessage={store.updateTextDialogsMessage}
+           addDialogsMessage={store.addDialogsMessage}
       />
     </BrowserRouter>
   )
 }
 
-bllSetRender(rootState)
-subscribe(bllSetRender)
+bllSetRender(store.getState())
+store.subscribe(bllSetRender)
 
 reportWebVitals();
