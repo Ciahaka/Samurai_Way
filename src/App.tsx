@@ -12,7 +12,7 @@ import {Photo} from './Component/navigation aside/photo/Photo';
 import {Contacts} from './Component/footer block/our contacts/Contacts';
 import {Project} from './Component/footer block/project/Project';
 import {AboutUs} from './Component/footer block/about us/AboutUs';
-import {RootStateType} from './redux/state'
+import {RootStateType, StoreType} from './redux/state'
 import {Friends} from './Component/navigation aside/friends/Friends';
 import {NewsBlock} from './Component/news/news block/NewsBlock';
 
@@ -24,9 +24,10 @@ export type StatePropsType = {
   messageValue:string
   updateTextPostsMessage:(newText: string)=>void
   updateTextDialogsMessage:(newText: string)=>void
+  store:StoreType
 }
 export const App = (props: StatePropsType) => {
-
+const state = props.store.getState()
 
   return (
     <div className="app-wrapper">
@@ -34,23 +35,23 @@ export const App = (props: StatePropsType) => {
       <NavBar/>
       <div className="app-wrapper-content">
         <Routes>
-          <Route path={'/Home/*'} element={<Profile postsData={props.state.posts.postsData}
+          <Route path={'/Home/*'} element={<Profile postsData={state.posts.postsData}
                                                     textForUpdate={props.textForUpdate}
-                                                    addPostsMessage={props.addPostsMessage}
-                                                    updateTextPostsMessage={props.updateTextPostsMessage}
+                                                    addPostsMessage={props.store.addPostsMessage.bind(props.store)}
+                                                    updateTextPostsMessage={props.store.updateTextPostsMessage.bind(props.store)}
           />}/>
 
-          <Route path={'/Profile/*'} element={<Profile postsData={props.state.posts.postsData}
+          <Route path={'/Profile/*'} element={<Profile postsData={state.posts.postsData}
                                                        textForUpdate={props.textForUpdate}
-                                                       addPostsMessage={props.addPostsMessage}
-                                                       updateTextPostsMessage={props.updateTextPostsMessage}
+                                                       addPostsMessage={props.store.addPostsMessage.bind(props.store)}
+                                                       updateTextPostsMessage={props.store.updateTextPostsMessage.bind(props.store)}
           />}/>
 
-          <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={props.state.dialogs.dialogsData}
-                                                       messageData={props.state.dialogs.messageData}
+          <Route path={'/Dialogs/*'} element={<Dialogs dialogsData={state.dialogs.dialogsData}
+                                                       messageData={state.dialogs.messageData}
                                                        messageValue={props.messageValue}
-                                                       updateTextDialogsMessage={props.updateTextDialogsMessage}
-                                                       addDialogsMessage={props.addDialogsMessage}
+                                                       updateTextDialogsMessage={props.store.updateTextDialogsMessage.bind(props.store)}
+                                                       addDialogsMessage={props.store.addDialogsMessage.bind(props.store)}
           />}/>
           <Route path={'/Music'} element={<Music/>}/>
           <Route path={'/Photo'} element={<Photo/>}/>
