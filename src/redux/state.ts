@@ -31,14 +31,31 @@ export type RootStateType = {
 
 export type StoreType = {
   _rootState: RootStateType
-  addPostsMessage: () => void
-  updateTextPostsMessage: (newText: string) => void
-  addDialogsMessage: () => void
-  updateTextDialogsMessage: (newText: string) => void
   _bllSetRender: (state: RootStateType) => void
   subscribe: (observer: (state: RootStateType) => void) => void
   getState: () => RootStateType
+  dispatch: (action: ActionType) => void
 }
+
+export type AddPostActionType = {
+  type: 'ADD-POST-MESSAGE'
+}
+export type UpdateTextPostActionType = {
+  type: 'UPDATE-TEXT-POST-MESSAGE'
+  newText: string
+}
+export type AddPostDialogsType = {
+  type: 'ADD-DIALOGS-MESSAGE'
+}
+export type UpdateTextDialogsActionType = {
+  type: 'UPDATE-DIALOGS-MESSAGE'
+  newText: string
+}
+
+export type ActionType = AddPostActionType
+  | UpdateTextPostActionType
+  | AddPostDialogsType
+  | UpdateTextDialogsActionType
 
 export const store: StoreType = {
   _rootState: {
@@ -68,38 +85,6 @@ export const store: StoreType = {
     },
 
   },
-  addPostsMessage()   {
-    const newPostsMessage = {
-      id: v1(),
-      message: this._rootState.posts.textForUpdate,
-      likesCount: 145
-    };
-
-    this._rootState.posts.postsData.push(newPostsMessage)
-    this._rootState.posts.textForUpdate = ''
-    this._bllSetRender(this._rootState)
-  },
-  updateTextPostsMessage(newText: string) {
-
-    this._rootState.posts.textForUpdate = newText
-    this._bllSetRender(this._rootState)
-  },
-  addDialogsMessage() {
-    const newPostsMessage = {
-      id: v1(),
-      message: this._rootState.dialogs.dialogsMessageValue,
-
-    };
-
-    this._rootState.dialogs.messageData.push(newPostsMessage)
-    this._rootState.dialogs.dialogsMessageValue = ''
-    this._bllSetRender(this._rootState)
-  },
-  updateTextDialogsMessage(newText: string) {
-
-    this._rootState.dialogs.dialogsMessageValue = newText
-    this._bllSetRender(this._rootState)
-  },
   _bllSetRender() {
 
   },
@@ -108,6 +93,43 @@ export const store: StoreType = {
   },
   getState() {
     return this._rootState
+  },
+  dispatch(action) {
+    switch (action.type) {
+      case 'ADD-POST-MESSAGE': {
+        const newPostsMessage = {
+          id: v1(),
+          message: this._rootState.posts.textForUpdate,
+          likesCount: 145
+        };
+
+        this._rootState.posts.postsData.push(newPostsMessage)
+        this._rootState.posts.textForUpdate = ''
+        this._bllSetRender(this._rootState)
+      }
+        break
+      case 'UPDATE-TEXT-POST-MESSAGE': {
+        this._rootState.posts.textForUpdate = action.newText
+        this._bllSetRender(this._rootState)
+      }
+        break
+      case 'ADD-DIALOGS-MESSAGE': {
+        const newPostsMessage = {
+          id: v1(),
+          message: this._rootState.dialogs.dialogsMessageValue,
+
+        };
+
+        this._rootState.dialogs.messageData.push(newPostsMessage)
+        this._rootState.dialogs.dialogsMessageValue = ''
+        this._bllSetRender(this._rootState)
+      }
+        break
+      case 'UPDATE-DIALOGS-MESSAGE': {
+        this._rootState.dialogs.dialogsMessageValue = action.newText
+        this._bllSetRender(this._rootState)
+      }
+    }
   }
 }
 
