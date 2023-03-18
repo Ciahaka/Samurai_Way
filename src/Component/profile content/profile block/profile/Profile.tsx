@@ -2,18 +2,16 @@ import React from 'react';
 import s from './Profile.module.css'
 import {MyPosts} from '../../posts block/my posts/MyPosts';
 import {ProfileInfo} from '../profile info/ProfileInfo';
-import {PostDataType} from '../../../../redux/state';
+import {ActionType, PostDataType} from '../../../../redux/state';
 import {OpponentPost} from '../../posts block/opponent post/OpponentPost';
-
-
 
 
 export type ProfilePropsType = {
   postsData: PostDataType[]
-  addPostsMessage:()=>void
   textForUpdate:string
-  updateTextPostsMessage:(newText: string)=>void
+  dispatch:(action:ActionType)=>void
 }
+
 export const Profile = (props: ProfilePropsType) => {
   return (
     <div className={s.profile}>
@@ -22,8 +20,7 @@ export const Profile = (props: ProfilePropsType) => {
         <ProfileInfo/>
         <MyPosts postsData={props.postsData}
                  textForUpdate={props.textForUpdate}
-                 addPostsMessage={props.addPostsMessage}
-                 updateTextPostsMessage={props.updateTextPostsMessage}
+                 dispatch={props.dispatch}
                  />
         <OpponentPost id={1} message={'Как же мне это одолеть??'} likesCount={10}/>
       </section>
