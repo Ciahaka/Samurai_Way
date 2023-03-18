@@ -17,10 +17,7 @@ const bllSetRender = (rootState: RootStateType) => {
            store={store}
            textForUpdate={rootState.posts.textForUpdate}
            messageValue={rootState.dialogs.dialogsMessageValue}
-           addPostsMessage={store.addPostsMessage}
-           updateTextPostsMessage={store.updateTextPostsMessage}
-           updateTextDialogsMessage={store.updateTextDialogsMessage}
-           addDialogsMessage={store.addDialogsMessage}
+           dispatch={store.dispatch.bind(store)}
       />
     </BrowserRouter>
   )
