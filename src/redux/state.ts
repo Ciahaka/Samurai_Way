@@ -1,7 +1,5 @@
 import {v1} from 'uuid';
 
-
-
 export type DialogDataType = {
   id: string
   name: string
@@ -30,6 +28,7 @@ export type RootStateType = {
   posts: PostsType
 
 }
+
 export type StoreType = {
   _rootState: RootStateType
   addPostsMessage: () => void
@@ -69,7 +68,7 @@ export const store: StoreType = {
     },
 
   },
-  addPostsMessage() {
+  addPostsMessage()   {
     const newPostsMessage = {
       id: v1(),
       message: this._rootState.posts.textForUpdate,
@@ -101,7 +100,7 @@ export const store: StoreType = {
     this._rootState.dialogs.dialogsMessageValue = newText
     this._bllSetRender(this._rootState)
   },
-  _bllSetRender(state: RootStateType) {
+  _bllSetRender() {
 
   },
   subscribe(observer) {
