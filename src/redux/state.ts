@@ -52,7 +52,8 @@ export type UpdateTextDialogsActionType = {
   newText: string
 }
 
-export type ActionType = AddPostActionType
+export type ActionType =
+  AddPostActionType
   | UpdateTextPostActionType
   | AddPostDialogsType
   | UpdateTextDialogsActionType
