@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/samurai-way-network/static/css/main.7e36b5b1.css",
-    "main.js": "/samurai-way-network/static/js/main.4ca07f7d.js",
-    "static/js/787.8ceb3ae6.chunk.js": "/samurai-way-network/static/js/787.8ceb3ae6.chunk.js",
-    "static/media/vichar-news.jpg": "/samurai-way-network/static/media/vichar-news.c665c5ee326bb4a1b153.jpg",
-    "static/media/camilla-velrata-1.jpg": "/samurai-way-network/static/media/camilla-velrata-1.a2614513ad52d8f04e30.jpg",
-    "static/media/img_for_main_content.jpg": "/samurai-way-network/static/media/img_for_main_content.deb534c65582b5143def.jpg",
-    "static/media/icons8-брут.svg": "/samurai-way-network/static/media/icons8-брут.006da2646debb61af73c3c6568b187b4.svg",
-    "static/media/icons8-черепашки-ниндзя.svg": "/samurai-way-network/static/media/icons8-черепашки-ниндзя.d6eeed663112da05d44394b64ba4b4a8.svg",
-    "static/media/icons8-рик-санчес.svg": "/samurai-way-network/static/media/icons8-рик-санчес.45d372b1a806243cc15e3ee713e895a7.svg",
-    "static/media/icons8-bmo.svg": "/samurai-way-network/static/media/icons8-bmo.8ed9ae331c8e3de66e6671090c9b650a.svg",
-    "static/media/stalin.svg": "/samurai-way-network/static/media/stalin.dafe3d2ee473f5828c5bfd92583527ed.svg",
-    "static/media/lukashenko.svg": "/samurai-way-network/static/media/lukashenko.1d39ca7bd0527fb1f7adb99755b451c5.svg",
-    "static/media/shakespeare.svg": "/samurai-way-network/static/media/shakespeare.11d32e1f2e84de751c9ae10ff1ec7437.svg",
-    "index.html": "/samurai-way-network/index.html",
-    "static/media/fuck.svg": "/samurai-way-network/static/media/fuck.246bc8a86883b4e388fb6a015595b680.svg",
-    "main.7e36b5b1.css.map": "/samurai-way-network/static/css/main.7e36b5b1.css.map",
-    "main.4ca07f7d.js.map": "/samurai-way-network/static/js/main.4ca07f7d.js.map",
-    "787.8ceb3ae6.chunk.js.map": "/samurai-way-network/static/js/787.8ceb3ae6.chunk.js.map"
+    "main.css": "/Samurai_Way/static/css/main.7e36b5b1.css",
+    "main.js": "/Samurai_Way/static/js/main.0e505c19.js",
+    "static/js/787.c4df9195.chunk.js": "/Samurai_Way/static/js/787.c4df9195.chunk.js",
+    "static/media/vichar-news.jpg": "/Samurai_Way/static/media/vichar-news.c665c5ee326bb4a1b153.jpg",
+    "static/media/camilla-velrata-1.jpg": "/Samurai_Way/static/media/camilla-velrata-1.a2614513ad52d8f04e30.jpg",
+    "static/media/img_for_main_content.jpg": "/Samurai_Way/static/media/img_for_main_content.deb534c65582b5143def.jpg",
+    "static/media/icons8-брут.svg": "/Samurai_Way/static/media/icons8-брут.006da2646debb61af73c3c6568b187b4.svg",
+    "static/media/icons8-черепашки-ниндзя.svg": "/Samurai_Way/static/media/icons8-черепашки-ниндзя.d6eeed663112da05d44394b64ba4b4a8.svg",
+    "static/media/icons8-рик-санчес.svg": "/Samurai_Way/static/media/icons8-рик-санчес.45d372b1a806243cc15e3ee713e895a7.svg",
+    "static/media/icons8-bmo.svg": "/Samurai_Way/static/media/icons8-bmo.8ed9ae331c8e3de66e6671090c9b650a.svg",
+    "static/media/stalin.svg": "/Samurai_Way/static/media/stalin.dafe3d2ee473f5828c5bfd92583527ed.svg",
+    "static/media/lukashenko.svg": "/Samurai_Way/static/media/lukashenko.1d39ca7bd0527fb1f7adb99755b451c5.svg",
+    "static/media/shakespeare.svg": "/Samurai_Way/static/media/shakespeare.11d32e1f2e84de751c9ae10ff1ec7437.svg",
+    "index.html": "/Samurai_Way/index.html",
+    "static/media/fuck.svg": "/Samurai_Way/static/media/fuck.246bc8a86883b4e388fb6a015595b680.svg",
+    "main.7e36b5b1.css.map": "/Samurai_Way/static/css/main.7e36b5b1.css.map",
+    "main.0e505c19.js.map": "/Samurai_Way/static/js/main.0e505c19.js.map",
+    "787.c4df9195.chunk.js.map": "/Samurai_Way/static/js/787.c4df9195.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7e36b5b1.css",
-    "static/js/main.4ca07f7d.js"
+    "static/js/main.0e505c19.js"
   ]
 }
